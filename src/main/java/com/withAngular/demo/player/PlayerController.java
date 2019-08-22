@@ -53,5 +53,17 @@ public class PlayerController {
 	public void savePlayer(@RequestBody Player player) {  // the RequestBody pass the player object to the url
 		playerservice.savePlayer(player);
 	}
+	
+	// handle PUT request
+	@RequestMapping(value = "/players/update", method= RequestMethod.PUT)
+	public void updatePlayer(@RequestBody Player player) {
+		playerservice.updatePlayer(player);
+	}
+	
+	// handle delete request
+	@RequestMapping(value = "/players/delete/{id}", method = RequestMethod.DELETE)
+	public void deletePlayer(@PathVariable int id) {
+		playerservice.deletePlayer(id);
+	}
 }
 
