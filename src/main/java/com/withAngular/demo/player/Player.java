@@ -20,6 +20,8 @@ public class Player {
 	
 	public Player(int i, String string) {
 		// TODO Auto-generated constructor stub
+		this.setId(i);
+		this.setPlayerName(string);
 	}
 	public int getId() {
 		return id;
