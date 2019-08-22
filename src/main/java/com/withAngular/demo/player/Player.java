@@ -1,5 +1,6 @@
 package com.withAngular.demo.player;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -15,6 +16,25 @@ public class Player {
 	// @Column(name = "PlayerName") when db table column name different from the
 	// property name assigned below
 	private String playerName;
+	private String preference;
+	@Column(name= "match_played")
+	private int matchPlayed;
+	private int runs;
+	private int wickets;
+	@Column(name= "highest_score")
+	private int highestScore;
+	@Column(name="best_wicket")
+	private String bestWicket;
+	private int fifties;
+	private int centuries;
+	private int thirties;
+	private int catches;
+	private int stumpings;
+	private int fours;
+	private int sixes;
+	@Column(name = "strike_rate")
+	private double strikeRate;
+	private double average;
 	
 	// getters and setters
 	
