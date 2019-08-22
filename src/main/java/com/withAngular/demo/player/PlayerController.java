@@ -1,5 +1,6 @@
 package com.withAngular.demo.player;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,6 +18,10 @@ import org.springframework.web.bind.annotation.RestController;
 // using restcontroller it is not require response body
 @RestController
 public class PlayerController {
+	
+	// inject to playerservice
+	@Autowired
+	private PlayerService playerservice;
 	
 	
 	@RequestMapping(value = "/message") // localhost:8080/message

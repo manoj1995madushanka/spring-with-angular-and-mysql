@@ -18,6 +18,10 @@ public class Player {
 	
 	// getters and setters
 	
+	public Player(int i, String string) {
+		// TODO Auto-generated constructor stub
+		
+	}
 	public int getId() {
 		return id;
 	}
