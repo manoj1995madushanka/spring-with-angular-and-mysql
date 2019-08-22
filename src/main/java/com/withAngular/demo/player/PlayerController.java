@@ -1,7 +1,10 @@
 package com.withAngular.demo.player;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 // using controller
@@ -29,5 +32,10 @@ public class PlayerController {
 	public String getMessage() {
 		return "Hi there";
 	}
+	
+	@RequestMapping(value = "/players", method= RequestMethod.GET) //localhost:8080/players
+	public List<Player> getPlayers(){
+		return playerservice.getAllThePlayers();
+	} 
 }
 
