@@ -7,6 +7,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.withAngular.demo.Player;
+
 
 @Service
 // service enable auto wirering it means dependency injection
@@ -35,7 +37,7 @@ public class PlayerService {
 	}
 	
 	//return single player
-	public Player getPalyer(int id) {
+	public Player getPlayer(int id) {
 		/*
 		 * for (Player p: list) { if(p.getId() == id) { return p; } } return null;
 		 */

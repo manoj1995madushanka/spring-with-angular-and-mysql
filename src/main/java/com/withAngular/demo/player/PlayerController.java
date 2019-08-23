@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.withAngular.demo.Player;
+
 // using controller
 /*
  * @Controller public class PlayerController {
@@ -44,7 +46,7 @@ public class PlayerController {
 	// get single player using id by rest api
 	@RequestMapping(value = "/players/{id}", method = RequestMethod.GET)
 	public Player getPlayerById(@PathVariable int id) {  // pathvariable set parameter value to url id
-		return playerservice.getPalyer(id);
+		return playerservice.getPlayer(id);
 	}
 	
 	// handle POST request
